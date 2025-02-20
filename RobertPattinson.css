@@ -1,6 +1,7 @@
 body{
-    background-color: black;
+    background-color: black;/*This results in the black background color*/
 }
+
 h1{
     color: red;
     text-align: center;
