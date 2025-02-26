@@ -1,3 +1,5 @@
+// general use
+
 function clearPage()
 {
     const elements = document.querySelectorAll("*");
@@ -15,3 +17,5 @@ function removeElement(element_to_delete)
 {
     element_to_delete.remove();
 }
+
+// loading screen
