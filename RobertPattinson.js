@@ -18,9 +18,15 @@ function removeElement(element_to_delete)
     element_to_delete.remove();
 }
 
-function wait(seconds) {
+function wait(seconds)
+{
     return new Promise(resolve => setTimeout(resolve, seconds * 1000));
-  }
+}
+
+function openNewWindow(directoryOrLink)
+{
+    location.replace(directoryOrLink);
+}
 
 // loading screen
 async function loopAction(paragraphElement)
