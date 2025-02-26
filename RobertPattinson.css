@@ -1,3 +1,5 @@
+/* REMEMBER: anything here can be used for any page , but we should generally try to keep unique functions within their categories within this file */
+/* General Use */
 body{
     background-color: black;/*This results in the black background color*/
 }
@@ -28,6 +30,7 @@ button{
     border-radius: 12px;
 }
 
+/* Title Screen */
 #fire{
     font-size: 128px;
     position: absolute;
@@ -46,6 +49,7 @@ button{
     left: 450px;
 }
 
+/* Loading Screen */
 #Test{
     color: red;
     
