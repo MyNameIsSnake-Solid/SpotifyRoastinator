@@ -2,10 +2,14 @@
 <html>
     <title></title>
     <link rel="stylesheet" href = "../RobertPattinson.css">
-    <body>
-        <p id = "Test">Loading Loading</p>
-        <script src = "../RobertPattinson.js"></script>
+    <body onload="loopAction(document.getElementById('LoadingText'))">
+        <p id = "LoadingText">Loading</p>
 
-        
+        <script src = "../RobertPattinson.js">
+            // window.onload="loopAction(document.getElementById('Test'))";
+        </script>
+
+        <!-- <button type="button" onclick="loopAction(document.getElementById('Test'))">click to test feature</button> -->
+
     </body>
 </html>

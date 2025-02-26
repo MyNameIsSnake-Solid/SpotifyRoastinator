@@ -50,7 +50,8 @@ button{
 }
 
 /* Loading Screen */
-#Test{
+#LoadingText{
     color: red;
-    
+    text-align: center;
+    font-size: xx-large;
 }
