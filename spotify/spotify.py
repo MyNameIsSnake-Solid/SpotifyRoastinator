@@ -9,9 +9,9 @@ from spotipy.cache_handler import FlaskSessionCacheHandler
 app = Flask("__name__")
 app.config['SECRET_KEY'] = os.urandom(64)
 
-client_id = 'e3ebd892691a4853bc0a34aac11e852a'
-client_secret = 'a007d43223ac4b27b6d40fb4f05a9fb4'
-redirect_uri = 'http://localhost:5000/callback'
+client_id = '66e2bea72d6f4838b9fdaf77f53c29a5'
+client_secret = 'f6d3e0c803eb40a1bf94a2bf9bf09270'
+redirect_uri = 'https://localhost:5000/callback'
 scope = 'playlist-read-private'
 
 cache_handler = FlaskSessionCacheHandler(session)
@@ -25,18 +25,20 @@ sp_oauth = SpotifyOAuth(
 )
 sp = Spotify(auth_manager=sp_oauth)
 
-app.route('/')
+@app.route('/')
 def home(): 
     if not sp_oauth.validate_token(cache_handler.get_cached_token()): 
         auth_url = sp_oauth.get_authorize_url()
         return redirect(auth_url)
     return redirect(url_for('get_playlists'))
 
-app.route('/callback')
+@app.route('/callback')
 def callback():
     sp_oauth.get_access_token(request.args['code'])
+    return redirect(url_for('get_playlists'))
+    
 
-app.route('/get_playlists')
+@app.route('/get_playlists')
 def get_playlists():
     if not sp_oauth.validate_token(cache_handler.get_cached_token()): 
         auth_url = sp_oauth.get_authorize_url()
@@ -48,7 +50,7 @@ def get_playlists():
 
     return playlists_html
 
-app.route('/logout')
+@app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('home'))
