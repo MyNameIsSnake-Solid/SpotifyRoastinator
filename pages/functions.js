@@ -1,0 +1,1 @@
+// all the functions will go here. . Use for all the html file
