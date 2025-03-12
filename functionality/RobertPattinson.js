@@ -28,7 +28,7 @@ function openNewWindow(directoryOrLink)
     location.replace(directoryOrLink);
 }
 
-// loading screen
+// loading screen. This animates the loading text to have the dots change
 async function loopAction(paragraphElement)
 {
     // console.log(paragraphElement + " " + paragraphElement.innerHTML);
