@@ -2,6 +2,7 @@
 /* General Use */
 .centerme{
     vertical-align: auto;
+    text-align: center;
 }
 
 body{
