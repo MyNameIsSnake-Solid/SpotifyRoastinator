@@ -1,4 +1,8 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 from flask import Flask, session, url_for, redirect, request
 
@@ -9,10 +13,15 @@ from spotipy.cache_handler import FlaskSessionCacheHandler
 app = Flask("__name__")
 app.config['SECRET_KEY'] = os.urandom(64)
 
-client_id = '66e2bea72d6f4838b9fdaf77f53c29a5'
-client_secret = 'f6d3e0c803eb40a1bf94a2bf9bf09270'
+client_id = os.getenv("CLIENT_KEY")
+client_secret = os.getenv("CLIENT_SECRET")
+
+
 redirect_uri = 'https://localhost:5000/callback'
-scope = 'playlist-read-private'
+scope = 'user-top-read'
+
+print(f"API Key: {client_id}")
+print(f"Client SecretL: {client_secret}")
 
 cache_handler = FlaskSessionCacheHandler(session)
 sp_oauth = SpotifyOAuth(
