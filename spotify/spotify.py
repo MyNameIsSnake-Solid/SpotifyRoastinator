@@ -1,3 +1,5 @@
+# do pip install for dotenv, flask, and spotipy
+
 from flask import Flask, redirect, request, session, url_for
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
