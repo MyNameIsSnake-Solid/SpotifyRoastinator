@@ -1,69 +1,37 @@
-import os
+from flask import Flask, render_template, redirect, request, session, url_for
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 
-from flask import Flask, session, url_for, redirect, request
 
-from spotipy import Spotify
-from spotipy.oauth2 import SpotifyOAuth
-from spotipy.cache_handler import FlaskSessionCacheHandler
-
-app = Flask("__name__")
-app.config['SECRET_KEY'] = os.urandom(64)
-
-client_id = os.getenv("CLIENT_KEY")
-client_secret = os.getenv("CLIENT_SECRET")
+CLIENT_ID = os.environ.get('CLIENT_KEY')
+CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
+REDIRECT_URI = 'http://localhost:5000'
 
 
-redirect_uri = 'https://localhost:5000/callback'
-scope = 'user-top-read'
-
-print(f"API Key: {client_id}")
-print(f"Client SecretL: {client_secret}")
-
-cache_handler = FlaskSessionCacheHandler(session)
-sp_oauth = SpotifyOAuth(
-    client_id = client_id,
-    client_secret = client_secret,
-    redirect_uri = redirect_uri,
-    scope = scope,
-    cache_handler = cache_handler,
-    show_dialog = True
+sp = spotipy.Spotify(
+    auth_manager=SpotifyOAuth(
+        client_id=CLIENT_ID,
+        client_secret=CLIENT_SECRET,
+        redirect_uri=REDIRECT_URI,
+        scope='user-top-read'
+    )
 )
-sp = Spotify(auth_manager=sp_oauth)
 
-@app.route('/')
-def home(): 
-    if not sp_oauth.validate_token(cache_handler.get_cached_token()): 
-        auth_url = sp_oauth.get_authorize_url()
-        return redirect(auth_url)
-    return redirect(url_for('get_playlists'))
 
-@app.route('/callback')
-def callback():
-    sp_oauth.get_access_token(request.args['code'])
-    return redirect(url_for('get_playlists'))
-    
 
-@app.route('/get_playlists')
-def get_playlists():
-    if not sp_oauth.validate_token(cache_handler.get_cached_token()): 
-        auth_url = sp_oauth.get_authorize_url()
-        return redirect(auth_url)
-    
-    playlists = sp.current_user_playlists()
-    playlists_info = [(pl['name'], pl['external_urls']['spotify']) for pl in playlists['items']]
-    playlists_html = '<br>'.join([f'{name}: {url}' for name, url in playlists_info])
+top_artists = sp.current_user_top_artists(limit=5, time_range='long_term')
+top_songs = sp.current_user_top_tracks(limit=5, time_range='long_term')
 
-    return playlists_html
+artists = [f"{idx}. {artist['name']}" for idx, artist in enumerate(top_artists['items'], 1)]
+songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'], 1)]
 
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect(url_for('home'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
+
+print(artists)
+print(songs)
