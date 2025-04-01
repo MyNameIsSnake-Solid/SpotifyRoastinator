@@ -23,7 +23,6 @@ sp = spotipy.Spotify(
 )
 
 
-
 top_artists = sp.current_user_top_artists(limit=5, time_range='long_term')
 top_songs = sp.current_user_top_tracks(limit=5, time_range='long_term')
 
