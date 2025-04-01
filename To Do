@@ -1,0 +1,16 @@
+Week of 4/1/2025
+    - determine if should use Flask or REACT for the project. The below uses Flask
+    - getting and displaying the roast
+        - how we plan to:
+            3 files: spotify.py, gemini.py, and roastGenMASTER.py
+
+            spotify.py will have a function that grabs the top 5 artists and songs and returns it. Call it getData()
+
+            gemini.py will have a function that takes in the data and returns the roast that is generated. Call it generateTheRoast()
+
+            roastGenMASTER.py will have the following structure:
+
+            artistsAndSongs = getData()
+            generatedRoast =  generateTheRoast(artistsAndSongs)
+            then you can use the render template to display the roast
+            FYI render template is a flask thing
