@@ -37,3 +37,7 @@ songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'],
 
 print(artists)
 print(songs)
+
+# will be called by the master file
+def getData():
+    print("WIP")
