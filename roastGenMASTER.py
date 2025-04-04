@@ -10,9 +10,11 @@ import os
 sys.path.append(os.path.abspath(spotifyFile))
 sys.path.append(os.path.abspath(geminiFile))
 
+print(os.path.abspath(spotifyFile))
+
 # import them
-from spotify import getData
-from gemini import generateRoast
+# from spotify import getData
+# from gemini import generateRoast
 
 
 # NOTE: the below is like this for now but might change/ due to not currently knowing what form the data and roast will be saved as
