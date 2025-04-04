@@ -1,0 +1,274 @@
+[33mcommit f8a8f5919eebf473dc826aa373b59e61a857ab72[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 18:56:12 2025 -0700
+
+    .
+
+[33mcommit 09c34f03dc7a96d084172d97f30f3a1e6ededf53[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 18:35:40 2025 -0700
+
+    d
+
+[33mcommit 97aa508ef7e92f2194b43df8f4fd8c2193c7ae9e[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 18:13:59 2025 -0700
+
+    implemented the process of getting the data and generating the roast with it (WIP)
+
+[33mcommit 20370a34fb2ab2865ce9b3359b631f6e873d8f4d[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 17:49:21 2025 -0700
+
+    .
+
+[33mcommit e1746ef3c19ae64dd055099f21030a13336fe619[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 17:41:42 2025 -0700
+
+    /
+
+[33mcommit 4ff71c591c9f1a8cdfafa29b10340ad8405c1e6f[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 17:32:25 2025 -0700
+
+    s
+
+[33mcommit 94dd1cc1b642695dd980a6a8d587b1a8adc36969[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 17:24:39 2025 -0700
+
+    .
+
+[33mcommit 8b85c04f22f89484cb2d21c9705edb2bc965fe79[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Thu Apr 3 17:18:54 2025 -0700
+
+    .
+
+[33mcommit 0473b223c192d15f7b8204d324331c8fcc3a4e5d[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 17:27:13 2025 -0700
+
+    created the master function that will handle the process of getting the data and generating the roast. Right now it has an issue with importing. Specifically the issue seems to be from what the imported files need to import and not the importing of the files themselves
+
+[33mcommit 66ba0233416171fb5450b84d079bbd8e68104eb4[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:53:06 2025 -0700
+
+    cleaned out duplicate files
+
+[33mcommit d2ce470ec261bf2ec80e1e3de1c5dfc0837b836c[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:47:33 2025 -0700
+
+    Put in a to do list file
+
+[33mcommit 90e2a4eccd351b2464e9cfa423d1e879bc675f5c[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:18:41 2025 -0700
+
+    added comment
+
+[33mcommit 9e461a62a3f003398662d98686c9f33f485df87b[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:15:15 2025 -0700
+
+    .
+
+[33mcommit 6133ede6c6361908df27896391b19077a84803b7[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:11:19 2025 -0700
+
+    .
+
+[33mcommit 65f4f8f1e132c3de180bc892170ccb924578188f[m
+Merge: ec44ce3 afb9004
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 16:05:19 2025 -0700
+
+    Merge branch 'main' of https://gitlab.com/spotifyroastinator/spotifyroastinator
+
+[33mcommit ec44ce34911781b7fc6aad34e072646b4c2106fe[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Tue Apr 1 15:40:55 2025 -0700
+
+    Test
+
+[33mcommit afb90044856c4052aae2017d151db32c9ae9b453[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Tue Apr 1 15:40:55 2025 -0700
+
+    Test
+
+[33mcommit f73594ce8f8edf1e637c5a44cdd0e0c14710ca04[m
+Merge: cbab21b 8d5fa39
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Tue Apr 1 15:33:41 2025 -0700
+
+    Merge branch 'main' of https://gitlab.com/spotifyroastinator/spotifyroastinator
+
+[33mcommit cbab21bcd60a38e7cbf7b88d4fcc2dda7d6c9d48[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Tue Apr 1 15:33:38 2025 -0700
+
+    Lots of changes
+
+[33mcommit 8d5fa39014db5dd218438e4ae26a42a0fc464e10[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Apr 1 15:13:19 2025 -0700
+
+    .
+
+[33mcommit edd1a091934c509f02a2390a94fb0811d0b1005d[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Fri Mar 21 01:06:25 2025 -0700
+
+    Changed name
+
+[33mcommit c9f8285792a41b7c582145e6153b28bbca71932c[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Thu Mar 13 19:45:36 2025 -0700
+
+    Changes
+
+[33mcommit fe12f7bbd58a6c26f152fd8cbfcc9c19e3c23c41[m
+Merge: 22aa8b5 1721632
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Thu Mar 13 18:32:10 2025 -0700
+
+    Merge branch 'main' of https://gitlab.com/spotifyroastinator/spotifyroastinator
+
+[33mcommit 17216323928f5a4f2e65570a332e20f37833870a[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 17:28:13 2025 -0700
+
+    Restored much of the main page and resetablished
+    what we had on the loading page. Though it was
+    realy only an animated loading text
+
+[33mcommit eed8b22c70ec54d7eb051fe160e9a3c62d12ccbc[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 17:11:07 2025 -0700
+
+    added a comment
+
+[33mcommit 71e402db2f5c14802d6d59996c2952913b232f1b[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 17:10:00 2025 -0700
+
+    just inserted a button
+
+[33mcommit d39cccba293ed384ab06b3981d3422ae75628023[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 17:05:52 2025 -0700
+
+    changed stuff
+
+[33mcommit 09defd246a3c7d190de47255c4de0d23867268e2[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 17:04:19 2025 -0700
+
+    put code
+
+[33mcommit 3544631233da285f76b5bd9b1ac8d2f85363c77d[m
+Author: Rudra Mukherjee <rudra280906@gmail.com>
+Date:   Tue Mar 11 16:50:30 2025 -0700
+
+    Set up the chatgpt and spotify folders for setting up the API
+
+[33mcommit cb7f81e2c24b974c3640a88170eef8035c1ccaaa[m
+Merge: 5e0f3b1 2abc5c0
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:48:52 2025 +0000
+
+    Merge branch 'Tryorse-Tryorse-Tryorse-Tryorse-main-patch-b09c-patch-01d8-patch-0309-patch-3659' into 'main'
+    
+    Have not tested that the directories given to access the css and js files from...
+    
+    See merge request spotifyroastinator/spotifyroastinator!3
+
+[33mcommit 2abc5c028ecc6c99b6e97599ab1eaf59a8acffd4[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:48:33 2025 +0000
+
+    Have not tested that the directories given to access the css and js files from an html file are correct yet
+
+[33mcommit 5e0f3b146c8980950f298c4a34522d3d8f5ae546[m
+Merge: 71442e5 fa71109
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:43:24 2025 +0000
+
+    Merge branch 'Tryorse-Tryorse-Tryorse-main-patch-b09c-patch-01d8-patch-0309' into 'main'
+    
+    Update 4 files
+    
+    See merge request spotifyroastinator/spotifyroastinator!2
+
+[33mcommit fa711095ca2698324d16768aec6a804238d3f9b0[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:43:06 2025 +0000
+
+    Update 4 files
+    
+    - /pages/style.css
+    - /pages/functions.js
+    - /pages/functionality/style.css
+    - /pages/functionality/functions.js
+
+[33mcommit 71442e5c40f514af98cdac0d8f4deb858b71c9c6[m
+Merge: 37a815d fd96eef
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:42:27 2025 +0000
+
+    Merge branch 'Tryorse-Tryorse-main-patch-b09c-patch-01d8' into 'main'
+    
+    added files
+    
+    See merge request spotifyroastinator/spotifyroastinator!1
+
+[33mcommit fd96eef0fd2687af66dadc3f436ecd2b4a2d6347[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:34:49 2025 +0000
+
+    Update 2 files
+    
+    - /pages/style.css
+    - /pages/functions.js
+
+[33mcommit 6d89569000c772549c57d0ba159582f72f467281[m
+Author: Tryorse <mk04106770@gmail.com>
+Date:   Tue Mar 11 23:33:12 2025 +0000
+
+    Added files
+
+[33mcommit 37a815d723a07a7b2351aa6bde2843cf6e33f9cc[m
+Author: Philip Valdehuesa <philipvaldehuesa1224@gmail.com>
+Date:   Tue Mar 11 23:29:36 2025 +0000
+
+    Upload New File
+
+[33mcommit c92487e0cb2415a72b4219255651af720655994f[m
+Author: Philip Valdehuesa <philipvaldehuesa1224@gmail.com>
+Date:   Tue Mar 11 23:28:51 2025 +0000
+
+    Upload New File
+
+[33mcommit 6e144f06a5be6ba5e39aa3e08990df6e554e6fa3[m
+Author: Rudra Mukherjee <rudra280906@gmail.com>
+Date:   Tue Mar 11 23:12:39 2025 +0000
+
+    Initial commit
+
+[33mcommit 22aa8b523b6302cc8ddf0f1ec4851a61079593e7[m
+Author: HoloFan019 <PhilipValdehuesa12242@gmail.com>
+Date:   Fri Mar 7 21:54:59 2025 -0800
+
+    Yuh
+
+[33mcommit 0be5b78812eb2df32b3e66ce9a75716cc42505f5[m
+Merge: bab78ff f3ad384
+Author: MyNameIsSoliidSnake <PhilipValdehuesa12242@gmail.com>
+Date:   Tue Feb 25 19:07:40 2025 -0800
+
+    Merge branch 'main
