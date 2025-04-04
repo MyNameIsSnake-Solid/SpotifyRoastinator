@@ -10,7 +10,7 @@ import os
 sys.path.append(os.path.abspath(spotifyFile))
 sys.path.append(os.path.abspath(geminiFile))
 
-print("dsffds     " + os.path.abspath(spotifyFile))
+print("path     " + os.path.abspath(spotifyFile))
 
 # import them
 from spotify import getData
