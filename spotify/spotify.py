@@ -34,9 +34,6 @@ def getData():
     # for loops to get tge top 5 artists and songs
     artists = [f"{idx}. {artist['name']}" for idx, artist in enumerate(top_artists['items'], 1)]
     songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'], 1)]
-
-
-    #y
-
-print(artists)
-print(songs)
+    print(artists)
+    print(songs)
+    #test
