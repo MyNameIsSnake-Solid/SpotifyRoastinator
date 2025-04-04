@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(geminiFile))
 from spotify import getData
 from gemini import generateRoast
 
-# NOTE: the below is like this for now but might change due to not currently knowing what form the data and roast will be saved as
+# NOTE: the below is like this for now but might change in the future due to not currently knowing what form the data and roast will be saved as
 data = getData() # call the function in the spotify file that gets and returns the data
 roast = generateRoast(data) # send the data to be generated
 
