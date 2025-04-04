@@ -9,7 +9,7 @@ import os
 
 # will be called by the master file
 def getData():
-    print("Getting Data (WIP)")
+    print("Getting Data (WIP).")
 
     load_dotenv()
 
