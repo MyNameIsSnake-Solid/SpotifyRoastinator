@@ -5,9 +5,8 @@ from google.genai import types
 
 # will be called by the master file
 def generateRoast(data): # take in the top 5 artists and songs data
-    print("WIP")
+    print("Generating Roast (WIP)")
 
-def generate():
     client = genai.Client(
         api_key=os.environ.get("GEMINI_API_KEY"),
     )
@@ -52,5 +51,5 @@ def generate():
     ):
         print(chunk.text, end="")
 
-if __name__ == "__main__":
-    generate()
+# if __name__ == "__main__":
+#     generate()
