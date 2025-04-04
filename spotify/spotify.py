@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, url_for
+from flask import Flask
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
@@ -35,3 +35,5 @@ songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'],
 
 print(artists)
 print(songs)
+
+#export artists and songs, having access to data. 
