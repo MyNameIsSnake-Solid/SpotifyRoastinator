@@ -3,6 +3,9 @@ import os
 from google import genai
 from google.genai import types
 
+# will be called by the master file
+def generateRoast(data): # take in the top 5 artists and songs data
+    print("WIP")
 
 def generate():
     client = genai.Client(
@@ -51,8 +54,3 @@ def generate():
 
 if __name__ == "__main__":
     generate()
-
-
-# will be called by the master file
-def generateRoast(data): # take in the top 5 artists and songs data
-    print("WIP")

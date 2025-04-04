@@ -7,10 +7,8 @@ import sys
 import os
 
 # Add the paths to sys.path
-# sys.path.append(os.path.abspath(spotifyFile))
-# sys.path.append(os.path.abspath(geminiFile))
-
-# print("path     " + os.path.abspath(spotifyFile))
+sys.path.append(os.path.abspath(spotifyFile))
+sys.path.append(os.path.abspath(geminiFile))
 
 # import them
 from spotify import getData

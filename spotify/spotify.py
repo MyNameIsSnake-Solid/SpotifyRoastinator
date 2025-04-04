@@ -6,6 +6,11 @@ from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
 import os
 
+
+# will be called by the master file
+def getData():
+    print("WIP")
+
 load_dotenv()
 
 
@@ -37,7 +42,3 @@ songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'],
 
 print(artists)
 print(songs)
-
-# will be called by the master file
-def getData():
-    print("WIP")
