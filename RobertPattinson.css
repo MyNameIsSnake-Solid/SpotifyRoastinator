@@ -1,7 +1,9 @@
 /* REMEMBER: anything here can be used for any page , but we should generally try to keep unique functions within their categories within this file */
 /* General Use */
 body{
-    background-color: black;/*This results in the black background color*/
+    background: linear-gradient(black, rgb(183, 45, 24));/*This results in the black background color*/
+    background-repeat: no-repeat;
+    background-attachment:  fixed;
 }
 
 h1{
