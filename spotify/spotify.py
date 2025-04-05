@@ -36,9 +36,7 @@ def getData():
     songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'], 1)]
     print(artists)
     print(songs)
-<<<<<<< HEAD
 
     #y
-=======
-    #test
->>>>>>> origin/main
+
+    return [artists, songs] # return an array that holds both arrays
