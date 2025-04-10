@@ -1,7 +1,7 @@
 import base64
 import os
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai import types
 
 # will be called by the master file
 def generateRoast(data): # take in the top 5 artists and songs data
