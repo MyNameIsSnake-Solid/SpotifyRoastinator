@@ -1,7 +1,11 @@
 import base64
 import os
-import google.generativeai as genai
-from google.generativeai import types
+from google import genai
+from google.genai import types
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # will be called by the master file
 def generateRoast(data): # take in the top 5 artists and songs data
@@ -11,23 +15,16 @@ def generateRoast(data): # take in the top 5 artists and songs data
     # api_key=os.environ.get("GEMINI_API_KEY"),
     # )
 
-    genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+def generate():
+    client = genai.Client(
+    api_key=os.environ.get("GEMINI_API_KEY"),
+
+    )
+
 
     model = "gemini-2.0-flash"
     contents = [
-        types.Content(
-            role="user",
-            parts=[
-                types.Part.from_text(text="""Hello!"""),
-            ],
-        ),
-        types.Content(
-            role="model",
-            parts=[
-                types.Part.from_text(text="""Alright, let's do this. Lay it on me. Tell me your top artists and songs. Don't be shy, I'm ready to dissect your musical soul...and probably find some skeletons in its closet. Don't worry, I'll be gentle...ish. 😉
-"""),
-            ],
-        ),
+
         types.Content( # HEADS-UP: This is where the input is to be
             role="user",
             parts=[
