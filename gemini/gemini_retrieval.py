@@ -7,9 +7,11 @@ from google.generativeai import types
 def generateRoast(data): # take in the top 5 artists and songs data
     print("Generating Roast (WIP)")
 
-    client = genai.Client(
-        api_key=os.environ.get("GEMINI_API_KEY"),
-    )
+    # client = genai.Client(
+    # api_key=os.environ.get("GEMINI_API_KEY"),
+    # )
+
+    genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
     model = "gemini-2.0-flash"
     contents = [
@@ -26,7 +28,7 @@ def generateRoast(data): # take in the top 5 artists and songs data
 """),
             ],
         ),
-        types.Content(
+        types.Content( # HEADS-UP: This is where the input is to be
             role="user",
             parts=[
                 types.Part.from_text(text="""INSERT_INPUT_HERE"""),
