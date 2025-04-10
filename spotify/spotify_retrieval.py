@@ -63,8 +63,8 @@ def pullFromSpotify(sp):
     songs = [f"{idx}. {song['name']}" for idx, song in enumerate(top_songs['items'], 1)]
 
     # print("Gathered data:")
-    print(artists)
-    print(songs)
+    # print(artists)
+    # print(songs)
 
     #y
 

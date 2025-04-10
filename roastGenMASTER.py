@@ -23,6 +23,6 @@ data = getData() # call the function in the spotify file that gets and returns t
 # print(data[0])
 # print(data[1])
 
-# roast = generateRoast(data) # send the data to be generated
+roast = generateRoast(data) # send the data to be generated
 
 # use Flask's render template to send in the generated roast directly to the loaded page to be more secure and straight forward
