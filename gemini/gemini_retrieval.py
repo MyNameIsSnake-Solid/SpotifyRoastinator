@@ -49,8 +49,11 @@ def generateRoast(data): # take in the top 5 artists and songs data
         contents=contents,
         config=generate_content_config,
     ):
-    
+
+        generatedRoast = chunk.text
         print(f"Generated Roast: { chunk.text }", end="") # eventually need to return the generated roast
+        return generatedRoast
+    return "Failure"
 
     
 # if __name__ == "__main__":

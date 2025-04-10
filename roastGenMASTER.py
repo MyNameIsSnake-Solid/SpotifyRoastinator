@@ -25,4 +25,7 @@ data = getData() # call the function in the spotify file that gets and returns t
 
 roast = generateRoast(data) # send the data to be generated
 
+if roast != "Failure":
+    print(f"send this roast to be displayed: { roast }")
+
 # use Flask's render template to send in the generated roast directly to the loaded page to be more secure and straight forward
