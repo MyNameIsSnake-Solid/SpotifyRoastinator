@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, url_for  # type: ignore
+from flask import Flask, render_template  # type: ignore
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv # type: ignore
