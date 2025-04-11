@@ -4,22 +4,22 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
+from spotify_retrieval import getData
 load_dotenv()
 
 
 # will be called by the master file
-def generateRoast(data): # take in the top 5 artists and songs data
-    print("Generating Roast (WIP)")
+def generateRoast(): # take in the top 5 artists and songs data
+    spotify_data = getData()
+    artists = "\n".join(spotify_data[0])
+    songs = "\n".join(spotify_data[1])
+    
+    # Format prompt with actual data
+    input_text = f"Top Artists:\n{artists}\n\nTop Songs:\n{songs}\n\nRoast me!"
+    return generate(input_text)
 
-    # client = genai.Client(
-    # api_key=os.environ.get("GEMINI_API_KEY"),
-    # )
-
-def generate():
-    client = genai.Client(
-    api_key=os.environ.get("GEMINI_API_KEY"),
-
-    )
+def generate(input_text):
+    client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 
     model = "gemini-2.0-flash"
@@ -27,9 +27,7 @@ def generate():
 
         types.Content( # HEADS-UP: This is where the input is to be
             role="user",
-            parts=[
-                types.Part.from_text(text="""INSERT_INPUT_HERE"""),
-            ],
+            parts=[types.Part.from_text(text=input_text),],
         ),
     ]
     generate_content_config = types.GenerateContentConfig(
@@ -43,17 +41,20 @@ def generate():
         ],
     )
 
+    full_response = []
     for chunk in client.models.generate_content_stream(
         model=model,
         contents=contents,
         config=generate_content_config,
     ):
 
-        generatedRoast = chunk.text
-        print(f"Generated Roast: { chunk.text }", end="") # eventually need to return the generated roast
-        return generatedRoast
-    return "Failure"
+        if chunk.text:
+            full_response.append(chunk.text)
+            print(chunk.text, end="", flush=True)  # Stream without prefix
+    
+    return "".join(full_response)
 
     
-# if __name__ == "__main__":
-#     generate()
+if __name__ == "__main__":
+    roast = generateRoast()
+    print(roast)
