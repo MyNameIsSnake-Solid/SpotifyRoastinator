@@ -1,7 +1,7 @@
-from flask import Flask, render_template, redirect, request, session, url_for
+from flask import Flask, render_template, redirect, request, session, url_for  # type: ignore
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 from spotipy.exceptions import SpotifyException
 # from spotify.venv import load_dotenv
 import os
