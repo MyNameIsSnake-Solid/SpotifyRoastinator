@@ -10,11 +10,12 @@ load_dotenv()
 
 CLIENT_ID = os.environ.get('CLIENT_KEY')
 CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
-REDIRECT_URI = 'http://localhost:5000'
+REDIRECT_URI = 'http://localhost:5000/callback'
 cache_path = '.cache'
 
 # will be called by the master file
 def getData():
+
     print("Getting Data (WIP).")
 
     # check if the token cache is empty or corrupted. If so then delete it

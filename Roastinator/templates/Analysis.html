@@ -2,13 +2,42 @@
 <html>
 <head>
     <title>Music Taste Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='RobertPattinson.css') }}">
 </head>
 <body>
-    <h1>Your Music Taste Roast</h1>
-    <div class="roast-container">
-        <!-- This will display the generated roast -->
-        <p>{{ roast }}</p>
+    <div class="container">
+
+    <div class="list">
+        <h2>Top artists</h2>
+        <ol>
+            {% for artists in artists %}
+            <li id = "artists">{{ artists.split(". ")[1] }}</li>
+            {% endfor %}
+        </ol>
     </div>
+
+    <div class="list">
+        <h2>Top Songs</h2>
+        <ol>
+            {% for song in songs %}
+            <li id = "songs">{{ song.split(". ")[1] }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="roast-container">
+        <h2>Your Music Taste Roast</h2>
+        <p id = "Yaas">{{ roast }}</p>
+    </div>
+
+    <div class="actions">
+        <a href="{{ url_for('signout')}}" class = "signout-btn">
+            Analyze Another Account
+        </a>
+    </div>
+    </div>
+    
 </body>
+
 </html>
 

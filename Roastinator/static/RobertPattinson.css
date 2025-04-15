@@ -57,3 +57,51 @@ button{
     text-align: center;
     font-size: xx-large;
 }
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.list {
+    margin: 30px 0;
+    color: white;
+}
+
+.list h2 {
+    color: #ff4444;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.list o1 {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+.roast-container {
+    background : rgba(0,0,0,0,0.3);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.roast-container h2 {
+    color: #ff4444;
+    margin-bottom: 15px;
+}
+
+#Yaas {
+    color: white;
+    line-height: 1.6;
+    font-size: 1.1em;
+}

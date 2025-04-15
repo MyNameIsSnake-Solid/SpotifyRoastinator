@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
+    <head>
     <title>Something's Cooking...</title>
-    <link rel="stylesheet" href = "../RobertPattinson.css">
+    <link rel="stylesheet" href = "{{ url_for('static', filename = 'RobertPattinson.css')}}">
+    <meta http-equiv="refresh" content="3;url={{ url_for('analysis') }}">
+    </head>
     <body onload="loopAction(document.getElementById('LoadingText'))">
         <p id = "LoadingText">Loading</p>
 
-        <script src = "../RobertPattinson.js">
-            // window.onload="loopAction(document.getElementById('Test'))";
+        <script>
+            setTimeout(() => {
+            window.location.href = "{{ url_for('analysis') }}";
+        }, 3000);
         </script>
-
-        <!-- <button type="button" onclick="loopAction(document.getElementById('Test'))">click to test feature</button> -->
-
-        <!-- Will need a way to check if it is done loading -->
-        <!-- Should take in what page to go to after loading is done dynamically -->
 
     </body>
 </html>
