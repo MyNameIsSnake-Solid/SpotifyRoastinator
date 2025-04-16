@@ -3,7 +3,7 @@ from spotipy.oauth2 import SpotifyOAuth
 import spotipy
 import os
 from gemini_retrieval import generateRoast
-from spotify_retrieval import getData, forceTokenRefresh
+from spotify_retrieval import getData
 
 app = Flask(__name__)
 app.secret_key = os.urandom(64)
@@ -52,13 +52,10 @@ def callback():
 
 @app.route('/loading')
 def loading():
-    try:
-        sp = spotipy.Spotify(auth=session['token_info']['access_token'])
-        forceTokenRefresh(sp)
-        return render_template('LoadingScreen.html')
-    except Exception as e:  # Add explicit exception handling
-        print(f"Loading error: {str(e)}")
+    if 'token_info' not in session:
         return redirect(url_for('login'))
+    
+    return render_template('LoadingScreen.html')
 
 
 @app.route('/analysis')
@@ -66,9 +63,9 @@ def analysis():
     try:
         if 'token_info' not in session:
             return redirect(url_for('login'))
-
-        spotify_data = getData()
-        roast = generateRoast()
+        access_token = session['token_info']['access_token']
+        spotify_data = getData(access_token)
+        roast = generateRoast(access_token)
 
         return render_template('Analysis.html', 
             artists=spotify_data[0],

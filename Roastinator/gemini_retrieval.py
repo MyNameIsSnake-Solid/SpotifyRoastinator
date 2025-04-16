@@ -9,8 +9,8 @@ load_dotenv()
 
 
 # will be called by the master file
-def generateRoast(): # take in the top 5 artists and songs data
-    spotify_data = getData()
+def generateRoast(access_token): # take in the top 5 artists and songs data
+    spotify_data = getData(access_token)
     artists = "\n".join(spotify_data[0])
     songs = "\n".join(spotify_data[1])
     
