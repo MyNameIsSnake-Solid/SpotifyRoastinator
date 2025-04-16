@@ -3,7 +3,7 @@ from spotipy.oauth2 import SpotifyOAuth
 import spotipy
 import os
 from gemini_retrieval import generateRoast
-from spotify_retrieval import getData
+from spotify_retrieval import getData 
 
 app = Flask(__name__)
 app.secret_key = os.urandom(64)
@@ -90,5 +90,3 @@ def signout():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-#yea
