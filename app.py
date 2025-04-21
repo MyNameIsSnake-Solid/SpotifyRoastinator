@@ -10,7 +10,7 @@ app.secret_key = os.urandom(64)
 
 SPOTIFY_CLIENT_ID = os.environ.get('CLIENT_KEY')
 SPOTIFY_CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
-REDIRECT_URI = 'http://localhost:5000/callback'
+REDIRECT_URI = 'http://spotifyroastinator-2.onrender.com/callback'
 SCOPE = 'user-top-read'
 
 
@@ -89,4 +89,4 @@ def signout():
     return redirect(url_for('title_screen'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
