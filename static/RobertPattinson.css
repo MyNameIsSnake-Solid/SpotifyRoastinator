@@ -105,3 +105,39 @@ button{
     line-height: 1.6;
     font-size: 1.1em;
 }
+
+.actions {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.signout-btn{
+    display:inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: #ff4757;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.signout-btn:hover{
+    background:#ff6b81;
+    transform:translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+    font-size: 1.2em;
+    transition: transform 0.3 ease;
+}
+
+.signout-btn:hover .btn-icon {
+    transform: rotate(15deg);
+}
