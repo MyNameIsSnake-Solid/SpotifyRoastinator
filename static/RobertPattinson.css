@@ -26,9 +26,6 @@ h1 {
 button{
     min-width: 320px;
     height: 60px;
-    position: relative;
-    top: 500px;
-    left: 775px;
     font-size: 1.2rem;
     background-color: #ff4757;
     font-family: sans-serif;
