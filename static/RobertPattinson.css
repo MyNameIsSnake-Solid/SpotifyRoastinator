@@ -23,13 +23,56 @@ button{
     top: 500px;
     left: 775px;
     font-size: larger;
-    background-color: rgb(55, 198, 55);
+    background-color: #ff4757;
     font-family: sans-serif;
     font-weight: 750;
     color: white;
     display: inline-block;
     border: none;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3 ease;
+}
+
+.emoji-container{
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.flame, .skull {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flame {
+    opacity: 1;
+}
+
+.skull {
+    opacity: 0;
+    transform: translate(-50%, 100%)
+}
+
+button:hover .flame {
+    opacity: 0;
+    transform: translate(-50%, -50%)
+}
+
+button:hover .skull {
+    opacity: 1;
+    transform: translate(-50%, -50%)
+}
+
+button:hover{
+    background:#ff6b81;
+    transform: scale(1.05);
 }
 
 /* Title Screen */
