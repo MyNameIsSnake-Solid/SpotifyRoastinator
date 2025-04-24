@@ -6,33 +6,37 @@ body{
     background-attachment:  fixed;
 }
 
-h1{
+h1 {
     color: red;
     text-align: center;
     font-family: sans-serif;
     font-weight: 1000;
-    font-size: xx-large;
-    position: absolute;
-    top: 150px;
+    font-size: 2rem;
+    margin: 2rem 0;
+    max-width: 800px;
 }
 
 button{
-    width: 200px;
-    height: 50px;
-    position: absolute;
+    min-width: 320px;
+    height: 60px;
+    position: relative;
     top: 500px;
     left: 775px;
-    font-size: larger;
+    font-size: 1.2rem;
     background-color: #ff4757;
     font-family: sans-serif;
     font-weight: 750;
     color: white;
-    display: inline-block;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3 ease;
+    gap: 12px;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+    
 }
 
 .emoji-container{
@@ -78,20 +82,16 @@ button:hover{
 /* Title Screen */
 #fire{
     font-size: 128px;
-    position: absolute;
-    left: 788px;
-    top: -125px;
+    margin: 2rem 0;
 }
 
 #text2{
     color: red;
-    text-align: center;
+    
     font-family: sans-serif;
     font-weight: 1000;
-    font-size: xx-large;
-    position: absolute;
-    top: 300px;
-    left: 450px;
+    font-size: 1.5rem;
+    margin: 2rem 0;
 }
 
 /* Loading Screen */
